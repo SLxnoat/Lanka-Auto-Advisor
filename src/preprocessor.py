@@ -12,13 +12,13 @@ class VehiclePreprocessor:
         processed_df = df.copy()
         print("Starting preprocessing...")
         
-        processed_df['listning_date'] =pd.to_datetime(processed_df['listning_date'], errors='coerce')
-        processed_df['listing_month'] = processed_df['listning_date'].dt.month
-        processed_df.drop('listning_date', axis=1, inplace=True)
+        processed_df['listing_date'] =pd.to_datetime(processed_df['listing_date'], errors='coerce')
+        processed_df['listing_month'] = processed_df['listing_date'].dt.month
+        processed_df.drop('listing_date', axis=1, inplace=True)
         
         for col in self.categorical_cols:
             if col in processed_df.columns:
-                le - LabelEncoder()
+                le = LabelEncoder()
                 processed_df[col] = le.fit_transform(processed_df[col].astype(str))
                 self.label_encoders[col] = le
                 print(f"Encoded {col} with {len(le.classes_)} unique values.")
