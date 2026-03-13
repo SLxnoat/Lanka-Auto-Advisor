@@ -1,5 +1,5 @@
 from src.data_loader import DataLoader
-from src.preprocessor import VehiclePreprocessor
+from src.preprocessing.preprocessor import VehiclePreprocessor
 from src.model import VehiclePriceModel
 
 loader = DataLoader()
