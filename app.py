@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 import os
 from src.model import VehiclePriceModel
-from src.preprocessor import VehiclePreprocessor
+from src.preprocessing.preprocessor import VehiclePreprocessor
 
 # Page Setup
 st.set_page_config(page_title="Lanka Auto Advisor", page_icon="🏎️", layout="centered")
